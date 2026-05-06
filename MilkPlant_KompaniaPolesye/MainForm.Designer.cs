@@ -75,10 +75,11 @@
             rbSortByNumber.Location = new Point(3, 72);
             rbSortByNumber.Name = "rbSortByNumber";
             rbSortByNumber.Size = new Size(86, 19);
-            rbSortByNumber.TabIndex = 2;
+            rbSortByNumber.TabIndex = 8;
             rbSortByNumber.TabStop = true;
             rbSortByNumber.Text = "По номеру";
             rbSortByNumber.UseVisualStyleBackColor = true;
+            rbSortByNumber.Click += SortFieldChanged;
             // 
             // rbSortByAmount
             // 
@@ -86,11 +87,11 @@
             rbSortByAmount.Location = new Point(3, 47);
             rbSortByAmount.Name = "rbSortByAmount";
             rbSortByAmount.Size = new Size(80, 19);
-            rbSortByAmount.TabIndex = 1;
+            rbSortByAmount.TabIndex = 7;
             rbSortByAmount.TabStop = true;
             rbSortByAmount.Text = "По сумме";
             rbSortByAmount.UseVisualStyleBackColor = true;
-            
+            rbSortByAmount.Click += SortFieldChanged;
             // 
             // rbSortByDate
             // 
@@ -98,10 +99,11 @@
             rbSortByDate.Location = new Point(3, 22);
             rbSortByDate.Name = "rbSortByDate";
             rbSortByDate.Size = new Size(67, 19);
-            rbSortByDate.TabIndex = 0;
+            rbSortByDate.TabIndex = 6;
             rbSortByDate.TabStop = true;
             rbSortByDate.Text = "По дате";
             rbSortByDate.UseVisualStyleBackColor = true;
+            rbSortByDate.Click += SortFieldChanged;
             // 
             // FilterGroupBox
             // 
@@ -124,6 +126,7 @@
             btnShowAll.TabIndex = 3;
             btnShowAll.Text = "Показать все";
             btnShowAll.UseVisualStyleBackColor = true;
+            btnShowAll.Click += btnShowAll_Click;
             // 
             // btnFilter
             // 
@@ -133,6 +136,7 @@
             btnFilter.TabIndex = 2;
             btnFilter.Text = "Фильтровать";
             btnFilter.UseVisualStyleBackColor = true;
+            btnFilter.Click += btnFilter_Click;
             // 
             // cmbClients
             // 
@@ -170,7 +174,7 @@
             btnSearch.Location = new Point(285, 57);
             btnSearch.Name = "btnSearch";
             btnSearch.Size = new Size(174, 23);
-            btnSearch.TabIndex = 1;
+            btnSearch.TabIndex = 5;
             btnSearch.Text = "Найти";
             btnSearch.UseVisualStyleBackColor = true;
             btnSearch.Click += btnSearch_Click;
@@ -181,7 +185,7 @@
             txtSearch.Location = new Point(3, 19);
             txtSearch.Name = "txtSearch";
             txtSearch.Size = new Size(459, 23);
-            txtSearch.TabIndex = 0;
+            txtSearch.TabIndex = 4;
             // 
             // dgvOrders
             // 
@@ -191,7 +195,6 @@
             dgvOrders.Name = "dgvOrders";
             dgvOrders.Size = new Size(763, 409);
             dgvOrders.TabIndex = 4;
-            
             // 
             // panel1
             // 

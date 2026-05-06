@@ -3,8 +3,6 @@ using Npgsql;
 using System;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-
 using System.Windows.Forms;
 
 namespace MilkPlant_KompaniaPolesye
@@ -13,12 +11,20 @@ namespace MilkPlant_KompaniaPolesye
     {
         private readonly DatabaseHelper _db;
         private string _currentSortField = "order_date";
+        private bool _isLoading = false; // флаг, чтобы избежать двойного вызова
 
         public MainForm()
         {
             InitializeComponent();
             _db = new DatabaseHelper();
+
             this.Load += MainForm_Load;
+            btnFilter.Click += btnFilter_Click;
+            btnShowAll.Click += btnShowAll_Click;
+            btnSearch.Click += btnSearch_Click;
+            rbSortByDate.CheckedChanged += SortFieldChanged;
+            rbSortByAmount.CheckedChanged += SortFieldChanged;
+            rbSortByNumber.CheckedChanged += SortFieldChanged;
         }
 
         private void MainForm_Load(object sender, EventArgs e)
@@ -31,7 +37,7 @@ namespace MilkPlant_KompaniaPolesye
             try
             {
                 using (var connection = new NpgsqlConnection(
-                    "Host=localhost;Database=milk_plant_db;Username=postgres;Password=donotkys1984"))
+                    "Host=localhost;Database=milk_plant_db;Username=postgres;Password="))
                 {
                     connection.Open();
 
@@ -41,9 +47,11 @@ namespace MilkPlant_KompaniaPolesye
                         MessageBoxButtons.OK,
                         MessageBoxIcon.Information);
 
+                    _isLoading = true;
                     LoadClients();
                     LoadOrders();
                     rbSortByDate.Checked = true;
+                    _isLoading = false;
                 }
             }
             catch (Exception ex)
@@ -124,6 +132,15 @@ namespace MilkPlant_KompaniaPolesye
 
         private void SortFieldChanged(object sender, EventArgs e)
         {
+            // Игнорируем вызов, если RadioButton снимается (становится false)
+            RadioButton rb = sender as RadioButton;
+            if (rb == null || !rb.Checked)
+                return;
+
+            // Игнорируем вызов при загрузке формы
+            if (_isLoading)
+                return;
+
             if (rbSortByDate.Checked)
                 _currentSortField = "order_date";
             else if (rbSortByAmount.Checked)
@@ -169,6 +186,7 @@ namespace MilkPlant_KompaniaPolesye
                 return;
             }
 
+            // Сбрасываем подсветку
             foreach (DataGridViewRow row in dgvOrders.Rows)
             {
                 foreach (DataGridViewCell cell in row.Cells)
