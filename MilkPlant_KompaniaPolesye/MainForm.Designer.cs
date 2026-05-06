@@ -44,23 +44,27 @@
             panel1 = new Panel();
             statusStrip1 = new StatusStrip();
             lblStats = new ToolStripStatusLabel();
+            groupBox1 = new GroupBox();
             SortGroupBox.SuspendLayout();
             FilterGroupBox.SuspendLayout();
             SearchGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvOrders).BeginInit();
             panel1.SuspendLayout();
             statusStrip1.SuspendLayout();
+            groupBox1.SuspendLayout();
             SuspendLayout();
             // 
             // SortGroupBox
             // 
-            SortGroupBox.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            SortGroupBox.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            SortGroupBox.AutoSize = true;
+            SortGroupBox.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             SortGroupBox.Controls.Add(rbSortByNumber);
             SortGroupBox.Controls.Add(rbSortByAmount);
             SortGroupBox.Controls.Add(rbSortByDate);
-            SortGroupBox.Location = new Point(547, 12);
+            SortGroupBox.Location = new Point(677, 15);
             SortGroupBox.Name = "SortGroupBox";
-            SortGroupBox.Size = new Size(225, 113);
+            SortGroupBox.Size = new Size(95, 113);
             SortGroupBox.TabIndex = 0;
             SortGroupBox.TabStop = false;
             SortGroupBox.Text = "Сортировка";
@@ -101,14 +105,14 @@
             // 
             // FilterGroupBox
             // 
-            FilterGroupBox.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            FilterGroupBox.AutoSize = true;
             FilterGroupBox.Controls.Add(btnShowAll);
             FilterGroupBox.Controls.Add(btnFilter);
             FilterGroupBox.Controls.Add(cmbClients);
             FilterGroupBox.Controls.Add(label1);
-            FilterGroupBox.Location = new Point(12, 12);
+            FilterGroupBox.Location = new Point(0, 9);
             FilterGroupBox.Name = "FilterGroupBox";
-            FilterGroupBox.Size = new Size(200, 113);
+            FilterGroupBox.Size = new Size(200, 126);
             FilterGroupBox.TabIndex = 1;
             FilterGroupBox.TabStop = false;
             // 
@@ -149,19 +153,21 @@
             // 
             // SearchGroupBox
             // 
-            SearchGroupBox.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            SearchGroupBox.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             SearchGroupBox.Controls.Add(btnSearch);
             SearchGroupBox.Controls.Add(txtSearch);
-            SearchGroupBox.Location = new Point(218, 24);
+            SearchGroupBox.Location = new Point(206, 15);
+            SearchGroupBox.MinimumSize = new Size(326, 102);
             SearchGroupBox.Name = "SearchGroupBox";
-            SearchGroupBox.Size = new Size(323, 100);
+            SearchGroupBox.Size = new Size(465, 102);
             SearchGroupBox.TabIndex = 2;
             SearchGroupBox.TabStop = false;
             SearchGroupBox.Text = "Поиск";
             // 
             // btnSearch
             // 
-            btnSearch.Location = new Point(143, 57);
+            btnSearch.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnSearch.Location = new Point(285, 57);
             btnSearch.Name = "btnSearch";
             btnSearch.Size = new Size(174, 23);
             btnSearch.TabIndex = 1;
@@ -171,26 +177,30 @@
             // 
             // txtSearch
             // 
-            txtSearch.Location = new Point(6, 22);
+            txtSearch.Dock = DockStyle.Fill;
+            txtSearch.Location = new Point(3, 19);
             txtSearch.Name = "txtSearch";
-            txtSearch.Size = new Size(311, 23);
+            txtSearch.Size = new Size(459, 23);
             txtSearch.TabIndex = 0;
             // 
             // dgvOrders
             // 
-            dgvOrders.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dgvOrders.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvOrders.Location = new Point(168, 154);
+            dgvOrders.Dock = DockStyle.Fill;
+            dgvOrders.Location = new Point(0, 0);
             dgvOrders.Name = "dgvOrders";
-            dgvOrders.Size = new Size(240, 144);
+            dgvOrders.Size = new Size(763, 409);
             dgvOrders.TabIndex = 4;
+            dgvOrders.CellContentClick += dgvOrders_CellContentClick;
             // 
             // panel1
             // 
+            panel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            panel1.AutoSize = true;
             panel1.Controls.Add(dgvOrders);
-            panel1.Location = new Point(12, 130);
+            panel1.Location = new Point(12, 163);
             panel1.Name = "panel1";
-            panel1.Size = new Size(760, 414);
+            panel1.Size = new Size(763, 409);
             panel1.TabIndex = 5;
             // 
             // statusStrip1
@@ -207,16 +217,28 @@
             lblStats.Name = "lblStats";
             lblStats.Size = new Size(0, 17);
             // 
+            // groupBox1
+            // 
+            groupBox1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            groupBox1.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            groupBox1.Controls.Add(FilterGroupBox);
+            groupBox1.Controls.Add(SortGroupBox);
+            groupBox1.Controls.Add(SearchGroupBox);
+            groupBox1.Location = new Point(0, 0);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(784, 157);
+            groupBox1.TabIndex = 7;
+            groupBox1.TabStop = false;
+            // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(784, 561);
+            Controls.Add(groupBox1);
             Controls.Add(statusStrip1);
-            Controls.Add(SortGroupBox);
-            Controls.Add(FilterGroupBox);
-            Controls.Add(SearchGroupBox);
             Controls.Add(panel1);
+            MinimumSize = new Size(800, 600);
             Name = "MainForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Заказы покупателей — ООО Молочный комбинат \"Полесье\"";
@@ -230,6 +252,8 @@
             panel1.ResumeLayout(false);
             statusStrip1.ResumeLayout(false);
             statusStrip1.PerformLayout();
+            groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -252,5 +276,6 @@
         private Panel panel1;
         private StatusStrip statusStrip1;
         private ToolStripStatusLabel lblStats;
+        private GroupBox groupBox1;
     }
 }

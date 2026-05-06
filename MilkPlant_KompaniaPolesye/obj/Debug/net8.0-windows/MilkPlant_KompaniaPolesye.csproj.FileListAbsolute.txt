@@ -21,3 +21,26 @@ C:\Users\Alexandr\Documents\GitHub\PM11\MilkPlant_KompaniaPolesye\obj\Debug\net8
 C:\Users\Alexandr\Documents\GitHub\PM11\MilkPlant_KompaniaPolesye\obj\Debug\net8.0-windows\MilkPlant_KompaniaPolesye.pdb
 C:\Users\Alexandr\Documents\GitHub\PM11\MilkPlant_KompaniaPolesye\obj\Debug\net8.0-windows\MilkPlant_KompaniaPolesye.genruntimeconfig.cache
 C:\Users\Alexandr\Documents\GitHub\PM11\MilkPlant_KompaniaPolesye\obj\Debug\net8.0-windows\ref\MilkPlant_KompaniaPolesye.dll
+C:\Users\User\Documents\GitHub\Новая папка\PM11\MilkPlant_KompaniaPolesye\bin\Debug\net8.0-windows\MilkPlant_KompaniaPolesye.exe
+C:\Users\User\Documents\GitHub\Новая папка\PM11\MilkPlant_KompaniaPolesye\bin\Debug\net8.0-windows\MilkPlant_KompaniaPolesye.deps.json
+C:\Users\User\Documents\GitHub\Новая папка\PM11\MilkPlant_KompaniaPolesye\bin\Debug\net8.0-windows\MilkPlant_KompaniaPolesye.runtimeconfig.json
+C:\Users\User\Documents\GitHub\Новая папка\PM11\MilkPlant_KompaniaPolesye\bin\Debug\net8.0-windows\MilkPlant_KompaniaPolesye.dll
+C:\Users\User\Documents\GitHub\Новая папка\PM11\MilkPlant_KompaniaPolesye\bin\Debug\net8.0-windows\MilkPlant_KompaniaPolesye.pdb
+C:\Users\User\Documents\GitHub\Новая папка\PM11\MilkPlant_KompaniaPolesye\bin\Debug\net8.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\User\Documents\GitHub\Новая папка\PM11\MilkPlant_KompaniaPolesye\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\User\Documents\GitHub\Новая папка\PM11\MilkPlant_KompaniaPolesye\bin\Debug\net8.0-windows\Npgsql.dll
+C:\Users\User\Documents\GitHub\Новая папка\PM11\MilkPlant_KompaniaPolesye\bin\Debug\net8.0-windows\System.Diagnostics.DiagnosticSource.dll
+C:\Users\User\Documents\GitHub\Новая папка\PM11\MilkPlant_KompaniaPolesye\obj\Debug\net8.0-windows\MilkPlant_KompaniaPolesye.csproj.AssemblyReference.cache
+C:\Users\User\Documents\GitHub\Новая папка\PM11\MilkPlant_KompaniaPolesye\obj\Debug\net8.0-windows\MilkPlant_KompaniaPolesye.MainForm.resources
+C:\Users\User\Documents\GitHub\Новая папка\PM11\MilkPlant_KompaniaPolesye\obj\Debug\net8.0-windows\MilkPlant_KompaniaPolesye.csproj.GenerateResource.cache
+C:\Users\User\Documents\GitHub\Новая папка\PM11\MilkPlant_KompaniaPolesye\obj\Debug\net8.0-windows\MilkPlant_KompaniaPolesye.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Documents\GitHub\Новая папка\PM11\MilkPlant_KompaniaPolesye\obj\Debug\net8.0-windows\MilkPlant_KompaniaPolesye.AssemblyInfoInputs.cache
+C:\Users\User\Documents\GitHub\Новая папка\PM11\MilkPlant_KompaniaPolesye\obj\Debug\net8.0-windows\MilkPlant_KompaniaPolesye.AssemblyInfo.cs
+C:\Users\User\Documents\GitHub\Новая папка\PM11\MilkPlant_KompaniaPolesye\obj\Debug\net8.0-windows\MilkPlant_KompaniaPolesye.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\GitHub\Новая папка\PM11\MilkPlant_KompaniaPolesye\obj\Debug\net8.0-windows\MilkPlant_KompaniaPolesye.sourcelink.json
+C:\Users\User\Documents\GitHub\Новая папка\PM11\MilkPlant_KompaniaPolesye\obj\Debug\net8.0-windows\MilkPlan.6C25E059.Up2Date
+C:\Users\User\Documents\GitHub\Новая папка\PM11\MilkPlant_KompaniaPolesye\obj\Debug\net8.0-windows\MilkPlant_KompaniaPolesye.dll
+C:\Users\User\Documents\GitHub\Новая папка\PM11\MilkPlant_KompaniaPolesye\obj\Debug\net8.0-windows\refint\MilkPlant_KompaniaPolesye.dll
+C:\Users\User\Documents\GitHub\Новая папка\PM11\MilkPlant_KompaniaPolesye\obj\Debug\net8.0-windows\MilkPlant_KompaniaPolesye.pdb
+C:\Users\User\Documents\GitHub\Новая папка\PM11\MilkPlant_KompaniaPolesye\obj\Debug\net8.0-windows\MilkPlant_KompaniaPolesye.genruntimeconfig.cache
+C:\Users\User\Documents\GitHub\Новая папка\PM11\MilkPlant_KompaniaPolesye\obj\Debug\net8.0-windows\ref\MilkPlant_KompaniaPolesye.dll

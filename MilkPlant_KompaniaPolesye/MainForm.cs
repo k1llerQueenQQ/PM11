@@ -16,5 +16,10 @@ namespace MilkPlant_KompaniaPolesye
         {
 
         }
+
+        private void dgvOrders_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
