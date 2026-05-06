@@ -7,7 +7,7 @@ namespace MilkPlant.Data
     public class DatabaseHelper
     {
         private readonly string _connectionString =
-            "Host=localhost;Database=milk_plant_db;Username=postgres;Password=твой_пароль";
+            "Host=localhost;Database=milk_plant_db;Username=postgres;Password=ваш_пароль";
 
         public DataTable ExecuteQuery(string query)
         {

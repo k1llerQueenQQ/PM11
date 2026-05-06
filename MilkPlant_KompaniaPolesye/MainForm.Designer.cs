@@ -90,7 +90,7 @@
             rbSortByAmount.TabStop = true;
             rbSortByAmount.Text = "По сумме";
             rbSortByAmount.UseVisualStyleBackColor = true;
-            rbSortByAmount.CheckedChanged += radioButton2_CheckedChanged;
+            
             // 
             // rbSortByDate
             // 
@@ -191,7 +191,7 @@
             dgvOrders.Name = "dgvOrders";
             dgvOrders.Size = new Size(763, 409);
             dgvOrders.TabIndex = 4;
-            dgvOrders.CellContentClick += dgvOrders_CellContentClick;
+            
             // 
             // panel1
             // 
