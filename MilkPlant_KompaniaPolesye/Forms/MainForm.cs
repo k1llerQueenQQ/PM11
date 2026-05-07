@@ -36,7 +36,7 @@ namespace MilkPlant_KompaniaPolesye
             try
             {
                 using (var connection = new NpgsqlConnection(
-                    "Host=localhost;Database=OrdersDB;Username=postgres;Password=donotkys1984"))
+                    "Host=localhost;Database=OrdersDB;Username=postgres;Password=-"))
                 {
                     connection.Open();
 
@@ -237,6 +237,12 @@ namespace MilkPlant_KompaniaPolesye
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
             }
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+
+
         }
     }
 }

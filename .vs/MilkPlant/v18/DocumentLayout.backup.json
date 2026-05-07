@@ -9,14 +9,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{1F04C71E-F89A-4844-83F7-6A1CF0774A37}|MilkPlant_KompaniaPolesye\\MilkPlant_KompaniaPolesye.csproj|c:\\users\\alexandr\\documents\\github\\pm11\\milkplant_kompaniapolesye\\forms\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1F04C71E-F89A-4844-83F7-6A1CF0774A37}|MilkPlant_KompaniaPolesye\\MilkPlant_KompaniaPolesye.csproj|solutionrelative:milkplant_kompaniapolesye\\forms\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1F04C71E-F89A-4844-83F7-6A1CF0774A37}|MilkPlant_KompaniaPolesye\\MilkPlant_KompaniaPolesye.csproj|c:\\users\\alexandr\\documents\\github\\pm11\\milkplant_kompaniapolesye\\forms\\mainform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1F04C71E-F89A-4844-83F7-6A1CF0774A37}|MilkPlant_KompaniaPolesye\\MilkPlant_KompaniaPolesye.csproj|solutionrelative:milkplant_kompaniapolesye\\forms\\mainform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1F04C71E-F89A-4844-83F7-6A1CF0774A37}|MilkPlant_KompaniaPolesye\\MilkPlant_KompaniaPolesye.csproj|c:\\users\\alexandr\\documents\\github\\pm11\\milkplant_kompaniapolesye\\data\\databasehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1F04C71E-F89A-4844-83F7-6A1CF0774A37}|MilkPlant_KompaniaPolesye\\MilkPlant_KompaniaPolesye.csproj|solutionrelative:milkplant_kompaniapolesye\\data\\databasehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,28 +30,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "MainForm.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\Alexandr\\Documents\\GitHub\\PM11\\MilkPlant_KompaniaPolesye\\Forms\\MainForm.Designer.cs",
-              "RelativeDocumentMoniker": "MilkPlant_KompaniaPolesye\\Forms\\MainForm.Designer.cs",
-              "ToolTip": "C:\\Users\\Alexandr\\Documents\\GitHub\\PM11\\MilkPlant_KompaniaPolesye\\Forms\\MainForm.Designer.cs",
-              "RelativeToolTip": "MilkPlant_KompaniaPolesye\\Forms\\MainForm.Designer.cs",
-              "ViewState": "AgIAAMIAAAAAAAAAAAAYwOsAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-07T09:52:03.565Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
               "Title": "MainForm.cs",
               "DocumentMoniker": "C:\\Users\\Alexandr\\Documents\\GitHub\\PM11\\MilkPlant_KompaniaPolesye\\Forms\\MainForm.cs",
               "RelativeDocumentMoniker": "MilkPlant_KompaniaPolesye\\Forms\\MainForm.cs",
-              "ToolTip": "C:\\Users\\Alexandr\\Documents\\GitHub\\PM11\\MilkPlant_KompaniaPolesye\\Forms\\MainForm.cs",
-              "RelativeToolTip": "MilkPlant_KompaniaPolesye\\Forms\\MainForm.cs",
-              "ViewState": "AgIAAMgAAAAAAAAAAAAYwPEAAAABAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\Alexandr\\Documents\\GitHub\\PM11\\MilkPlant_KompaniaPolesye\\Forms\\MainForm.cs*",
+              "RelativeToolTip": "MilkPlant_KompaniaPolesye\\Forms\\MainForm.cs*",
+              "ViewState": "AgIAALQAAAAAAAAAAAAmwPQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-06T18:09:47.729Z",
+              "WhenOpened": "2026-05-07T10:00:02.296Z",
               "EditorCaption": ""
             },
             {
@@ -68,24 +47,11 @@
               "Title": "MainForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "DocumentMoniker": "C:\\Users\\Alexandr\\Documents\\GitHub\\PM11\\MilkPlant_KompaniaPolesye\\Forms\\MainForm.cs",
               "RelativeDocumentMoniker": "MilkPlant_KompaniaPolesye\\Forms\\MainForm.cs",
-              "ToolTip": "C:\\Users\\Alexandr\\Documents\\GitHub\\PM11\\MilkPlant_KompaniaPolesye\\Forms\\MainForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "RelativeToolTip": "MilkPlant_KompaniaPolesye\\Forms\\MainForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "ToolTip": "C:\\Users\\Alexandr\\Documents\\GitHub\\PM11\\MilkPlant_KompaniaPolesye\\Forms\\MainForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]*",
+              "RelativeToolTip": "MilkPlant_KompaniaPolesye\\Forms\\MainForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-06T17:16:10.471Z",
               "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "DatabaseHelper.cs",
-              "DocumentMoniker": "C:\\Users\\Alexandr\\Documents\\GitHub\\PM11\\MilkPlant_KompaniaPolesye\\Data\\DatabaseHelper.cs",
-              "RelativeDocumentMoniker": "MilkPlant_KompaniaPolesye\\Data\\DatabaseHelper.cs",
-              "ToolTip": "C:\\Users\\Alexandr\\Documents\\GitHub\\PM11\\MilkPlant_KompaniaPolesye\\Data\\DatabaseHelper.cs",
-              "RelativeToolTip": "MilkPlant_KompaniaPolesye\\Data\\DatabaseHelper.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-06T17:13:55.009Z",
-              "EditorCaption": ""
             }
           ]
         }

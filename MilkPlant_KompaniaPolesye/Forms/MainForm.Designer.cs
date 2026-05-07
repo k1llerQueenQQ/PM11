@@ -90,6 +90,7 @@
             // groupBoxSearch
             // 
             groupBoxSearch.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            groupBoxSearch.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             groupBoxSearch.Controls.Add(btnSearch);
             groupBoxSearch.Controls.Add(txtSearch);
             groupBoxSearch.Location = new Point(268, 12);
@@ -110,10 +111,12 @@
             // 
             // txtSearch
             // 
+            txtSearch.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             txtSearch.Location = new Point(6, 27);
             txtSearch.Name = "txtSearch";
             txtSearch.Size = new Size(238, 23);
             txtSearch.TabIndex = 0;
+            txtSearch.TextChanged += txtSearch_TextChanged;
             // 
             // groupBoxSort
             // 
@@ -201,7 +204,7 @@
             MinimumSize = new Size(800, 600);
             Name = "MainForm";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Работа с заказами — ООО Молочный комбинат \"Полесье\"";
+            Text = "Работа с заказами ";
             groupBoxFilter.ResumeLayout(false);
             groupBoxFilter.PerformLayout();
             groupBoxSearch.ResumeLayout(false);
