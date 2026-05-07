@@ -45,6 +45,7 @@
             groupBoxFilter.Controls.Add(btnFilter);
             groupBoxFilter.Controls.Add(cmbClients);
             groupBoxFilter.Controls.Add(lblClient);
+            groupBoxFilter.FlatStyle = FlatStyle.Popup;
             groupBoxFilter.Location = new Point(12, 12);
             groupBoxFilter.Name = "groupBoxFilter";
             groupBoxFilter.Size = new Size(250, 120);
@@ -54,6 +55,7 @@
             // 
             // btnShowAll
             // 
+            btnShowAll.FlatStyle = FlatStyle.Popup;
             btnShowAll.Location = new Point(6, 85);
             btnShowAll.Name = "btnShowAll";
             btnShowAll.Size = new Size(238, 25);
@@ -63,6 +65,7 @@
             // 
             // btnFilter
             // 
+            btnFilter.FlatStyle = FlatStyle.Popup;
             btnFilter.Location = new Point(6, 55);
             btnFilter.Name = "btnFilter";
             btnFilter.Size = new Size(238, 25);
@@ -73,6 +76,7 @@
             // cmbClients
             // 
             cmbClients.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbClients.FlatStyle = FlatStyle.Popup;
             cmbClients.FormattingEnabled = true;
             cmbClients.Location = new Point(6, 27);
             cmbClients.Name = "cmbClients";
@@ -102,6 +106,8 @@
             // 
             // btnSearch
             // 
+            btnSearch.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnSearch.FlatStyle = FlatStyle.Popup;
             btnSearch.Location = new Point(6, 55);
             btnSearch.Name = "btnSearch";
             btnSearch.Size = new Size(238, 25);
@@ -112,6 +118,7 @@
             // txtSearch
             // 
             txtSearch.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            txtSearch.BorderStyle = BorderStyle.FixedSingle;
             txtSearch.Location = new Point(6, 27);
             txtSearch.Name = "txtSearch";
             txtSearch.Size = new Size(238, 23);
@@ -134,9 +141,10 @@
             // rbSortDesc
             // 
             rbSortDesc.AutoSize = true;
+            rbSortDesc.FlatStyle = FlatStyle.Popup;
             rbSortDesc.Location = new Point(6, 78);
             rbSortDesc.Name = "rbSortDesc";
-            rbSortDesc.Size = new Size(102, 19);
+            rbSortDesc.Size = new Size(101, 19);
             rbSortDesc.TabIndex = 2;
             rbSortDesc.Text = "По убыванию";
             rbSortDesc.UseVisualStyleBackColor = true;
@@ -145,9 +153,10 @@
             // 
             rbSortAsc.AutoSize = true;
             rbSortAsc.Checked = true;
+            rbSortAsc.FlatStyle = FlatStyle.Popup;
             rbSortAsc.Location = new Point(6, 53);
             rbSortAsc.Name = "rbSortAsc";
-            rbSortAsc.Size = new Size(116, 19);
+            rbSortAsc.Size = new Size(115, 19);
             rbSortAsc.TabIndex = 1;
             rbSortAsc.TabStop = true;
             rbSortAsc.Text = "По возрастанию";
@@ -156,6 +165,7 @@
             // cmbSortField
             // 
             cmbSortField.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbSortField.FlatStyle = FlatStyle.Popup;
             cmbSortField.FormattingEnabled = true;
             cmbSortField.Items.AddRange(new object[] { "Заказчик", "Дата заказа", "Сумма заказа" });
             cmbSortField.Location = new Point(6, 22);
@@ -175,7 +185,7 @@
             dgvOrders.ReadOnly = true;
             dgvOrders.RowHeadersVisible = false;
             dgvOrders.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvOrders.Size = new Size(762, 364);
+            dgvOrders.Size = new Size(762, 398);
             dgvOrders.TabIndex = 3;
             // 
             // statusStrip

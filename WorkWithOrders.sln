@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.14.37216.2 d17.14
+# Visual Studio Version 18
+VisualStudioVersion = 18.5.11723.231 stable
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MilkPlant_KompaniaPolesye", "MilkPlant_KompaniaPolesye\MilkPlant_KompaniaPolesye.csproj", "{1F04C71E-F89A-4844-83F7-6A1CF0774A37}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkWithOrders", "MilkPlant_KompaniaPolesye\WorkWithOrders.csproj", "{1F04C71E-F89A-4844-83F7-6A1CF0774A37}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -11,12 +11,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("MilkPlant_KompaniaPolesye")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("WorkWithOrders")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+30f4f17f608863c97de9517a23cd8edb95178bbb")]
-[assembly: System.Reflection.AssemblyProductAttribute("MilkPlant_KompaniaPolesye")]
-[assembly: System.Reflection.AssemblyTitleAttribute("MilkPlant_KompaniaPolesye")]
+[assembly: System.Reflection.AssemblyProductAttribute("WorkWithOrders")]
+[assembly: System.Reflection.AssemblyTitleAttribute("WorkWithOrders")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 [assembly: System.Runtime.Versioning.TargetPlatformAttribute("Windows7.0")]
 [assembly: System.Runtime.Versioning.SupportedOSPlatformAttribute("Windows7.0")]

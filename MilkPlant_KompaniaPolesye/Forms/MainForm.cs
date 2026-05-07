@@ -36,7 +36,7 @@ namespace MilkPlant_KompaniaPolesye
             try
             {
                 using (var connection = new NpgsqlConnection(
-                    "Host=localhost;Database=OrdersDB;Username=postgres;Password=-"))
+                    "Host=localhost;Database=OrdersDB;Username=postgres;Password=donotkys1984"))
                 {
                     connection.Open();
 
