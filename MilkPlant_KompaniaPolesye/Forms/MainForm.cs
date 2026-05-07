@@ -10,8 +10,7 @@ namespace MilkPlant_KompaniaPolesye
     public partial class MainForm : Form
     {
         private readonly DatabaseHelper _db;
-        private string _currentSortField = "order_date";
-        private bool _isLoading = false; // флаг, чтобы избежать двойного вызова
+        private bool _isLoading = false;
 
         public MainForm()
         {
@@ -22,9 +21,9 @@ namespace MilkPlant_KompaniaPolesye
             btnFilter.Click += btnFilter_Click;
             btnShowAll.Click += btnShowAll_Click;
             btnSearch.Click += btnSearch_Click;
-            rbSortByDate.CheckedChanged += SortFieldChanged;
-            rbSortByAmount.CheckedChanged += SortFieldChanged;
-            rbSortByNumber.CheckedChanged += SortFieldChanged;
+            cmbSortField.SelectedIndexChanged += SortFieldChanged;
+            rbSortAsc.CheckedChanged += SortDirectionChanged;
+            rbSortDesc.CheckedChanged += SortDirectionChanged;
         }
 
         private void MainForm_Load(object sender, EventArgs e)
@@ -37,7 +36,7 @@ namespace MilkPlant_KompaniaPolesye
             try
             {
                 using (var connection = new NpgsqlConnection(
-                    "Host=localhost;Database=milk_plant_db;Username=postgres;Password="))
+                    "Host=localhost;Database=OrdersDB;Username=postgres;Password=donotkys1984"))
                 {
                     connection.Open();
 
@@ -48,9 +47,10 @@ namespace MilkPlant_KompaniaPolesye
                         MessageBoxIcon.Information);
 
                     _isLoading = true;
+                    cmbSortField.SelectedIndex = 0;
+                    rbSortAsc.Checked = true;
                     LoadClients();
                     LoadOrders();
-                    rbSortByDate.Checked = true;
                     _isLoading = false;
                 }
             }
@@ -64,15 +64,35 @@ namespace MilkPlant_KompaniaPolesye
             }
         }
 
+        private string GetSortField()
+        {
+            switch (cmbSortField.SelectedItem?.ToString())
+            {
+                case "Заказчик":
+                    return "c.CustomerName";
+                case "Дата заказа":
+                    return "o.OrderDate";
+                case "Сумма заказа":
+                    return "o.OrderAmount";
+                default:
+                    return "c.CustomerName";
+            }
+        }
+
+        private string GetSortDirection()
+        {
+            return rbSortDesc.Checked ? "DESC" : "ASC";
+        }
+
         private void LoadClients()
         {
             try
             {
-                string query = @"SELECT id, name FROM counterparties WHERE is_buyer = TRUE ORDER BY name";
+                string query = "SELECT CustomerID, CustomerName FROM Customers ORDER BY CustomerName";
                 DataTable clients = _db.ExecuteQuery(query);
 
-                cmbClients.DisplayMember = "name";
-                cmbClients.ValueMember = "id";
+                cmbClients.DisplayMember = "CustomerName";
+                cmbClients.ValueMember = "CustomerID";
                 cmbClients.DataSource = clients;
             }
             catch (Exception ex)
@@ -89,22 +109,29 @@ namespace MilkPlant_KompaniaPolesye
         {
             try
             {
+                string sortField = GetSortField();
+                string sortDir = GetSortDirection();
+
                 string query = $@"
                     SELECT 
-                        co.id,
-                        co.order_number AS ""Номер заказа"",
-                        co.order_date AS ""Дата"",
-                        cp.name AS ""Клиент"",
-                        co.total_amount AS ""Сумма""
-                    FROM customer_orders co
-                    JOIN counterparties cp ON co.customer_id = cp.id
+                        o.OrderID,
+                        c.CustomerName AS ""Заказчик"",
+                        c.City AS ""Город"",
+                        c.Phone AS ""Телефон"",
+                        o.OrderDate AS ""Дата заказа"",
+                        o.OrderAmount AS ""Сумма заказа""
+                    FROM Orders o
+                    JOIN Customers c ON o.CustomerID = c.CustomerID
                     {whereClause}
-                    ORDER BY {_currentSortField}";
+                    ORDER BY {sortField} {sortDir}";
 
                 DataTable orders = _db.ExecuteQuery(query);
                 dgvOrders.DataSource = orders;
 
-                dgvOrders.Columns["id"].Visible = false;
+                dgvOrders.Columns["OrderID"].Visible = false;
+                dgvOrders.Columns["Дата заказа"].DefaultCellStyle.Format = "dd.MM.yyyy";
+                dgvOrders.Columns["Сумма заказа"].DefaultCellStyle.Format = "N2";
+
                 UpdateStats(orders);
             }
             catch (Exception ex)
@@ -124,30 +151,23 @@ namespace MilkPlant_KompaniaPolesye
 
             foreach (DataRow row in orders.Rows)
             {
-                totalAmount += Convert.ToDecimal(row["Сумма"]);
+                totalAmount += Convert.ToDecimal(row["Сумма заказа"]);
             }
 
-            lblStats.Text = $"Всего заказов: {totalOrders} | Общая сумма: {totalAmount:C}";
+            lblStats.Text = $"Всего заказов: {totalOrders} | Общая сумма: {totalAmount:N2}";
         }
 
         private void SortFieldChanged(object sender, EventArgs e)
         {
-            // Игнорируем вызов, если RadioButton снимается (становится false)
+            if (_isLoading) return;
+            LoadOrders();
+        }
+
+        private void SortDirectionChanged(object sender, EventArgs e)
+        {
             RadioButton rb = sender as RadioButton;
-            if (rb == null || !rb.Checked)
-                return;
-
-            // Игнорируем вызов при загрузке формы
-            if (_isLoading)
-                return;
-
-            if (rbSortByDate.Checked)
-                _currentSortField = "order_date";
-            else if (rbSortByAmount.Checked)
-                _currentSortField = "total_amount";
-            else if (rbSortByNumber.Checked)
-                _currentSortField = "order_number";
-
+            if (rb == null || !rb.Checked) return;
+            if (_isLoading) return;
             LoadOrders();
         }
 
@@ -163,8 +183,8 @@ namespace MilkPlant_KompaniaPolesye
                 return;
             }
 
-            string customerId = cmbClients.SelectedValue.ToString();
-            LoadOrders($"WHERE co.customer_id = '{customerId}'");
+            int customerId = Convert.ToInt32(cmbClients.SelectedValue);
+            LoadOrders($"WHERE c.CustomerID = {customerId}");
         }
 
         private void btnShowAll_Click(object sender, EventArgs e)
@@ -186,7 +206,6 @@ namespace MilkPlant_KompaniaPolesye
                 return;
             }
 
-            // Сбрасываем подсветку
             foreach (DataGridViewRow row in dgvOrders.Rows)
             {
                 foreach (DataGridViewCell cell in row.Cells)
